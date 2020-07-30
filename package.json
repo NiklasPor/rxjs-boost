@@ -1,0 +1,60 @@
+{
+  "name": "rxjs-boost",
+  "version": "0.0.1",
+  "description": "Fire up your RxJS experience to a new level 🔥",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NiklasPor/rxjs-boost"
+  },
+  "author": {
+    "name": "Niklas Portmann",
+    "email": "niklaspor@gmail.com"
+  },
+  "keywords": [
+    "rxjs",
+    "operators",
+    "typescript",
+    "javascript"
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "publish:coverage": "codecov -t $npm_config_rxjs_boost_codecov",
+    "release:coverage": "npm run coverage && npm run publish:coverage",
+    "build": "tsc --pretty",
+    "watch": "npm run build -- --watch",
+    "watch:test": "jest --watch",
+    "release:package": "npm run build && npm publish",
+    "release": "npm run release:coverage && npm run release:package"
+  },
+  "peerDependencies": {
+    "rxjs": "6.6.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.1",
+    "@types/node": "^14.0.11",
+    "@types/prettier": "^2.0.1",
+    "codecov": "^3.7.0",
+    "jest": "^26.0.1",
+    "jest-marbles": "^2.5.1",
+    "ts-jest": "^26.1.4",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.9.7",
+    "prettier": "^2.0.5",
+    "rxjs": "6.6.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  }
+}
