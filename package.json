@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Fire up your RxJS experience to a new level 🔥",
   "license": "MIT",
+  "homepage": "https://rxjs-boost.vercel.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/NiklasPor/rxjs-boost"

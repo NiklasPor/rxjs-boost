@@ -2,7 +2,7 @@ import { OperatorFunction } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 /**
- * Throws if the passed in value as an error, if it evaluates `value instanceof Error` to true.
+ * Throws the passed value as an error, if it evaluates `value instanceof Error` to true.
  * @param project A projection function, which will be performed on the value. Similar to `map`. The result is used for the conditional throw of the Error.
  *
  * @example
