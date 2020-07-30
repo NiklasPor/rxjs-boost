@@ -1,5 +1,4 @@
 import { cold } from 'jest-marbles';
-import { of } from 'rxjs';
 import { switchTap } from './switch-tap';
 
 describe('switchTap', () => {
@@ -7,8 +6,8 @@ describe('switchTap', () => {
     const input = cold('abc|', { a: 'a', b: 'b', c: 'c' });
     const expected = input;
 
-    const result = input.pipe(switchTap(() => of('z')));
+    const result = input.pipe(switchTap(() => cold('z|', { z: 'z' })));
 
-    expect(true).toBe(true);
+    expect(result).toBeObservable(expected);
   });
 });
