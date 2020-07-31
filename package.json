@@ -28,7 +28,7 @@
     "coverage": "jest --coverage",
     "publish:coverage": "codecov -t $npm_config_rxjs_boost_codecov",
     "release:coverage": "npm run coverage && npm run publish:coverage",
-    "build": "tsc --pretty",
+    "build": "tsc --pretty -p tsconfig.lib.json",
     "watch": "npm run build -- --watch",
     "watch:test": "jest --watch",
     "release:package": "npm run build && npm publish",
