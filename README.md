@@ -10,8 +10,10 @@ Fire up your RxJS experience to a new level 🔥
 
 Visit the [official documentation](https://rxjs-boost.vercel.app) and have a look at the collection of operators. Or get started with one of the few below:
 
-- [throwIfError](https://rxjs-boost.vercel.app/modules/_throw_if_error_.html)
 - [switchTap](https://rxjs-boost.vercel.app/modules/_switch_tap_.html)
+- [throwIf](https://rxjs-boost.vercel.app/modules/_throw_if_.html)
+- [throwIfNull](https://rxjs-boost.vercel.app/modules/_throw_if_null_.html)
+- [throwIfUndefined](https://rxjs-boost.vercel.app/modules/_throw_if_undefined_.html)
 
 ---
 

@@ -12,9 +12,10 @@ import { map } from 'rxjs/operators';
  * const input = of(value as string | undefined);
  *
  * const result = input.pipe(
- *    throwIfUndefined(() => error),
- *     map(takesOnlyStrings)
- *  );
+ *   map(v => v) // typeof v = string | undefined
+ *   throwIfUndefined(() => 'error'),
+ *   map(v => v) // typeof v = string
+ * );
  * ```
  */
 export function throwIfUndefined<T>(
