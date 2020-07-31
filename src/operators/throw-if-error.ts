@@ -6,12 +6,14 @@ import { map } from 'rxjs/operators';
  * @param project A projection function, which will be performed on the value. Similar to `map`. The result is used for the conditional throw of the Error.
  *
  * @example
+ * ```
  * const input = cold('au|', {a: 'a', u: undefined}).pipe(
  *   // Will throw if value is undefined or null:
  *   throwIfError(value => value ?? Error('Value must be defined'))
  * )
  *
  * const result = cold('a#', {a: 'a'})
+ * ```
  */
 export function throwIfError<T, R = T>(
   project?: (value: T, index: number) => R
