@@ -31,5 +31,5 @@ import { retryWithDelay, switchTap, throwIf } from 'rxjs-boost/operators';
 
 - Why are there `throwIf`, `throwIfNull` and `throwIfUndefined` – isn't one of them enough?
   - When strict null checks are enabled, TypeScript doesn't include `null` and `undefined` in all other types. Therefore you'll want to narrow down the type inside your observable pipe. The example of `throwIfNull` inside the [documentation](https://rxjs-boost.vercel.app/modules/_throw_if_null_.html) also displays this.
-- I've got an idea of a super cool, not overloaded operator – where can I submit my idea?
+- I've got an idea of a super cool, not overloaded operator – where can I submit it?
   - Just open an issue. There is no template yet :)
