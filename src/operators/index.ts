@@ -1,3 +1,4 @@
+export * from './retry-with-delay';
 export * from './switch-tap';
 export * from './throw-if';
 export * from './throw-if-null';

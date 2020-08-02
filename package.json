@@ -45,6 +45,7 @@
     "codecov": "^3.7.1",
     "jest": "^26.2.1",
     "jest-marbles": "^2.5.1",
+    "rxjs-marbles": "^6.0.1",
     "prettier": "^2.0.5",
     "rxjs": "6.6.0",
     "ts-jest": "^26.1.4",
