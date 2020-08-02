@@ -27,5 +27,5 @@ npm i rxjs-boost
 ### Import
 
 ```ts
-import { switchTap, throwIfError } from 'rxjs-boost/operators';
+import { retryWithDelay, switchTap, throwIf } from 'rxjs-boost/operators';
 ```
