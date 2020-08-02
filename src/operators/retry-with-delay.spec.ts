@@ -54,6 +54,23 @@ describe('retryWithDelay', () => {
   );
 
   it(
+    'amount of retries should default to 1',
+    marbles((m) => {
+      m.bind();
+      const delay = m.time('--|');
+
+      const source = m.cold('#', {}, error);
+
+      // expect to be delayed by: 2 (delay) * 1 (count)
+      const expected = m.cold('--#', {}, error);
+
+      const result = source.pipe(retryWithDelay(delay));
+
+      m.expect(result).toBeObservable(expected);
+    })
+  );
+
+  it(
     'resubscribe each time',
     marbles((m) => {
       let firstCall = true;
