@@ -8,11 +8,11 @@ import { catchError } from 'rxjs/operators';
 
 /**
  * Catches an error if [conditionFn] evaluates to be truthy.
- * If the error is catched, it is
+ * If the error is catched, the original observable sequence will be replaced with the result of [selectorFn].
  *
  * @param conditionFn Determines if an error should be catched.
  * @param selectorFn Selector which provides a new observable.
- *                   The newly provided Observable will continue the observable chain.
+ *                   The newly provided observable will continue the observable chain.
  *
  * @example
  * ```
