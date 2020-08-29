@@ -1,4 +1,3 @@
-import { cold } from 'jest-marbles';
 import { iif } from 'rxjs';
 import { configure } from 'rxjs-marbles';
 import { retryWithDelay } from './retry-with-delay';
@@ -8,14 +7,17 @@ const { marbles } = configure({ run: false });
 const error = 'error';
 
 describe('retryWithDelay', () => {
-  it('should not change observable without errors', () => {
-    const input = cold('a-b-|', { a: 'a', b: 'b' });
+  it(
+    'should not change observable without errors',
+    marbles((m) => {
+      const input = m.cold('a-b-|', { a: 'a', b: 'b' });
 
-    const expected = input;
-    const result = input.pipe(retryWithDelay(1000, 20));
+      const expected = input;
+      const result = input.pipe(retryWithDelay(1000, 20));
 
-    expect(result).toBeObservable(expected);
-  });
+      m.expect(result).toBeObservable(expected);
+    })
+  );
 
   it(
     'should never retry with a count of 0',
