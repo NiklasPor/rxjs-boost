@@ -17,6 +17,7 @@ Visit the [official documentation](https://rxjs-boost.vercel.app) and have a loo
 - [throwIf](https://rxjs-boost.vercel.app/modules/_throw_if_.html)
 - [throwIfNull](https://rxjs-boost.vercel.app/modules/_throw_if_null_.html)
 - [throwIfUndefined](https://rxjs-boost.vercel.app/modules/_throw_if_undefined_.html)
+- [wrapIntoObservable](https://rxjs-boost.vercel.app/modules/_wrap_into_observable_.html)
 
 ## Installation
 
