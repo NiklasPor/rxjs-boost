@@ -9,7 +9,7 @@ Fire up your RxJS experience to a new level 🔥
 
 ---
 
-Visit the [official documentation](https://rxjs-boost.vercel.app) and have a look at the collection of operators. Or get started with one of the few below:
+Visit the [official documentation](https://rxjs-boost.vercel.app) and have a look at the collection of operators and utils. Or get started with one of the few below:
 
 - [catchIf](https://rxjs-boost.vercel.app/modules/_catch_if_.html)
 - [retryWithDelay](https://rxjs-boost.vercel.app/modules/_retry_with_delay_.html)
@@ -25,6 +25,7 @@ npm i rxjs-boost
 ```
 
 ```ts
+import { wrapIntoObservable } from 'rxjs-boost';
 import { retryWithDelay, switchTap, throwIf } from 'rxjs-boost/operators';
 ```
 

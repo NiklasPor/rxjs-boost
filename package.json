@@ -1,12 +1,22 @@
 {
   "name": "rxjs-boost",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Fire up your RxJS experience to a new level 🔥",
   "license": "MIT",
   "homepage": "https://rxjs-boost.vercel.app/",
   "repository": {
     "type": "git",
     "url": "https://github.com/NiklasPor/rxjs-boost"
+  },
+  "exports": {
+    ".": {
+      "node": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js"
+    },
+    "./operators": {
+      "node": "./dist/cjs/operators/index.js",
+      "default": "./dist/esm/operators/index.js"
+    }
   },
   "author": {
     "name": "Niklas Portmann",
@@ -19,16 +29,16 @@
     "javascript"
   ],
   "files": [
-    "lib"
+    "dist"
   ],
-  "main": "lib/index",
-  "types": "lib/index",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
     "publish:coverage": "codecov -t $npm_config_rxjs_boost_codecov",
     "release:coverage": "npm run coverage && npm run publish:coverage",
-    "build": "tsc --pretty -p tsconfig.lib.json",
+    "build": "tsc --pretty -p tsconfig.cjs.json && tsc --pretty -p tsconfig.esm.json",
     "watch": "npm run build -- --watch",
     "watch:test": "jest --watch",
     "release:package": "npm run build && npm publish",
